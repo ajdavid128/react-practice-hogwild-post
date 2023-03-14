@@ -7,15 +7,16 @@ import PigCards from "./PigCards";
 
 function App() {
 
-	const [pigFetch, setPigFetch] = useState([]);
+	console.log(hogs)
 
 	const pigCardArray = hogs.map((pig) => {
-		return <PigCards key={pig.id} {...pig} /> 
+		return <PigCards key={pig.name} {...pig} /> 
 	}) 
 
 	return (
 		<div className="App">
 			<Nav />
+			{pigCardArray}
 		</div>
 	);
 }
