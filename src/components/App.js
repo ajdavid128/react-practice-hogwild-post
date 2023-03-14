@@ -16,7 +16,9 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			{pigCardArray}
+			<div className="ui grid container">
+				{pigCardArray}
+			</div>
 		</div>
 	);
 }
