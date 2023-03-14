@@ -8,7 +8,7 @@ import Filter from "./Filter";
 
 function App() {
 
-	
+	const [filter, setFilter] = useState(false)
 
 	console.log(hogs)
 
@@ -22,7 +22,11 @@ function App() {
 				<Nav />
 			</div>
 			<div className="sixteen wide column centered">
-				<Filter hogs={hogs}/>
+				<Filter 
+					hogs={hogs} 
+					setFilter={setFilter} 
+					filter={filter}
+				/>
 			</div>
 			<div className="sixteen wide column centered">
 				{pigCardArray}
