@@ -10,7 +10,7 @@ function App() {
 	console.log(hogs)
 
 	const pigCardArray = hogs.map((pig) => {
-		return <PigCards key={pig.name} {...pig} /> 
+		return <PigCards key={pig.name} pig={pig} /> 
 	}) 
 
 	return (
