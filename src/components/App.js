@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 
 import hogs from "../porkers_data";
 import PigCards from "./PigCards";
+import Filter from "./Filter";
 
 function App() {
+
+	
 
 	console.log(hogs)
 
@@ -14,9 +17,14 @@ function App() {
 	}) 
 
 	return (
-		<div className="App">
-			<Nav />
-			<div className="ui grid container">
+		<div className="ui grid container App">
+			<div className="sixteen wide column centered">
+				<Nav />
+			</div>
+			<div className="sixteen wide column centered">
+				<Filter hogs={hogs}/>
+			</div>
+			<div className="sixteen wide column centered">
 				{pigCardArray}
 			</div>
 		</div>

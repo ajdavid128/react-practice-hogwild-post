@@ -1,14 +1,15 @@
 
 
-function PigDetails() {
+function PigDetails({pig}) {
 
-    
+    const {name, weight, image, specialty, greased, "highest medal achieved": medal} = pig
+
     return (
         <div>
-            <h3>Specialty: {specialty}</h3>
-            <h3>Weight: {weight}</h3>
-            <h3>Highest Medal Acheived: {medal}</h3>
-            {greased ? "This is a greasy little piggy" : "This piggy is dry AF"}
+            <h4>Specialty: {specialty}</h4>
+            <h4>Weight: {weight}</h4>
+            <h4>Highest Medal Acheived: {medal}</h4>
+            {greased ? <h4>This is a greasy little piggy</h4> : <h4>This piggy is dry AF</h4>}
         </div>
     )
 };
