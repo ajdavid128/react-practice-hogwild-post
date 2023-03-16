@@ -8,12 +8,14 @@ import Filter from "./Filter";
 
 function App() {
 
-	const [filter, setFilter] = useState(false)
+	const [filter, setFilter] = useState("")
 	const [greased, setGreased] = useState(false)
 
+	console.log(hogs)
 
-
-	// console.log(hogs)
+	const filteredArray = hogs.filter((pig) => {
+		return pig.name.toLowerCase().includes(filter.toLowerCase() || pig.weight)
+	})
 
 	const pigCardArray = hogs.map((pig) => {
 		return <PigCards key={pig.name} pig={pig} /> 
