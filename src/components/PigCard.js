@@ -1,15 +1,24 @@
-
+import PigDetails from "./PigDetails";
+import {useState} from 'react'
 
 function PigCard({pig}) {
 
-// console.log(pig)
+    const [showDetails, setShowDetails] = useState(false)
 
-const {name, greased, weight, image, specialty, "highest medal achieved": medal} = pig
+    // console.log(pig)
+
+    const {name, greased, weight, image, specialty, "highest medal achieved": medal} = pig
+
+    const handleDisplayInfo = () => {
+        setShowDetails(!showDetails);
+    };
+    // console.log(showDetails)
 
     return (
-        <div>
+        <div onClick={handleDisplayInfo}>
             <h1>{name}</h1>
             <img src={image} alt="piggy"/>
+            {showDetails ? <PigDetails /> : null}
         </div>
     )
 };
