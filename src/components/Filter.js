@@ -7,6 +7,10 @@ function Filter({hogs, greased, setGreased, setFilter, filter}) {
         console.log("changing???")
     }
 
+    const handleSearch = () => {
+        
+    }
+
     return (
         <div>
             <label>Greasy Piggies</label>
@@ -14,6 +18,12 @@ function Filter({hogs, greased, setGreased, setFilter, filter}) {
                 type="checkbox"
                 onChange={handleChange}
                 />
+            <br/>
+            <input 
+                type="text"
+                placeholder="search"
+                onChange={handleSearch}
+            />
         </div>
     )
 };
