@@ -18,7 +18,7 @@ function PigCard({pig}) {
         <div onClick={handleDisplayInfo}>
             <h1>{name}</h1>
             <img src={image} alt="piggy"/>
-            {showDetails ? <PigDetails /> : null}
+            {showDetails ? <PigDetails pig={pig}/> : null}
         </div>
     )
 };
