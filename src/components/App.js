@@ -9,8 +9,11 @@ import Filter from "./Filter";
 function App() {
 
 	const [filter, setFilter] = useState(false)
+	const [greased, setGreased] = useState(false)
 
-	console.log(hogs)
+
+
+	// console.log(hogs)
 
 	const pigCardArray = hogs.map((pig) => {
 		return <PigCards key={pig.name} pig={pig} /> 
@@ -26,6 +29,8 @@ function App() {
 					hogs={hogs} 
 					setFilter={setFilter} 
 					filter={filter}
+					greased={greased}
+					setGreased={setGreased}
 				/>
 			</div>
 			<div className="sixteen wide column centered">

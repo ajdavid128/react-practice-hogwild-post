@@ -1,7 +1,8 @@
 
 
-function Filter({hogs}) {
+function Filter({hogs, greased, setGreased, setFilter, filter}) {
 
+    
     const handleChange = () => {
         console.log("changing???")
     }
