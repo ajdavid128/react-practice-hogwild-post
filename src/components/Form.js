@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 
-function Form() {
+function Form({onFirstLastName}) {
 
     const [formInfo, setFormInfo] = useState({
         firstName: "",
@@ -21,6 +21,11 @@ function Form() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(formInfo)
+        onFirstLastName(formInfo)
+        setFormInfo({
+            firstName: "",
+            lastName: ""
+        })
     }
 
 
