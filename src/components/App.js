@@ -19,9 +19,8 @@ function App() {
 	console.log(names)
 
 	const nameArray = names.map((name) => {
-		return <div>
-			<h1>Hi, I'm {name.firstName} {name.lastName}!</h1>
-		</div>
+		return <h1 key={name.firstName}>Hi, I'm {name.firstName} {name.lastName}!</h1>
+		
 	})
 
 	return (
