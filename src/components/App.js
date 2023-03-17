@@ -8,7 +8,6 @@ import { useState } from "react";
 
 import hogs from "../porkers_data";
 
-
 function App() {
 
 	const [names, setNames] = useState([])
